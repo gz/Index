@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["make_hash","Hashes a `value` using a specified `hasher_builder`."]],"struct":[["IndexHasher","Simple hasher using the 64-bit FNV-1 hash function with 64-bit FNV offset basis: `0xcbf29ce484222325` and 64-bit FNV prime: `0x100000001b3`."],["IndexHasherBuilder","Builder for [`IndexHasher`]."]]});
