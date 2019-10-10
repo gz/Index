@@ -25,7 +25,7 @@ fn test_index() {
 
     for (i, line) in reader.lines().enumerate() {
         let line: String = line
-            .unwrap_or_else(|_| panic!("Error while reading file: `{}` at line: {}", filename, i));
+            .unwrap_or_else(|_| panic!("Error while reading file: `{}` at line: {}", filename, i+1));
 
         let split = line.split(|c: char| !c.is_alphanumeric());
 
