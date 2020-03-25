@@ -93,6 +93,7 @@ pub struct Parameters<S> {
 /// assert_eq!(index.len(), 4);
 /// assert_eq!(index.capacity(), 8);
 /// ```
+#[derive(Clone)]
 pub struct Index<K, V, S = IndexHasherBuilder> {
     params: Parameters<S>,
     capacity: usize,
@@ -201,7 +202,7 @@ impl<K, V, S> Index<K, V, S> {
     /// 
     /// assert_eq!((index.probe())(45, 2), p(45, 2));
     /// ```
-    pub fn probe(&self) -> (fn(usize, usize) -> usize) {
+    pub fn probe(&self) -> fn(usize, usize) -> usize {
         self.params.probe
     }
 
